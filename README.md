@@ -1,17 +1,43 @@
-# pocket_pulse
+# PocketPulse 💳📱
 
-A new Flutter project.
+**PocketPulse** is a responsive, modern personal finance and budget tracker mobile/web application built with Flutter and Dart. It empowers users to log daily expenses, monitor spending habits, and visualize transactional data through interactive charts.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## ✨ Features
 
-A few resources to get you started if this is your first Flutter project:
+- **Full CRUD Capabilities:**
+  - **Create:** Add new expenses with title, amount, date, and category via an interactive modal sheet.
+  - **Read:** View detailed expense lists along with automatically calculated total expenditure.
+  - **Update:** Tap any existing transaction to edit and update its details in real-time.
+  - **Delete:** Remove entries using smooth swipe-to-delete gestures, backed by an immediate **Undo** snackbar buffer.
+- **Visual Data Analytics:** Interactive pie charts built using `fl_chart` to display proportional spending per category.
+- **Localization:** Indian Rupee (₹) formatting and localized date handling using the `intl` package.
+- **Material Design 3:** Sleek, modern, user-friendly mobile and web UI.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠️ Tech Stack & Architecture
+
+- **Framework:** [Flutter](https://flutter.dev/) (v3.x)
+- **Language:** [Dart](https://dart.dev/)
+- **State Management:** Reactive State (`StatefulWidget` & `setState`)
+- **Key Packages:**
+  - `fl_chart`: Dynamic visual analytics and charting.
+  - `intl`: Currency and date formatting.
+- **Architecture:** Layered Reactive Architecture (Presentation, State Management, Data Layer).
+
+---
+
+## 📁 Project Structure
+
+```text
+lib/
+├── main.dart                   # Application entry point & main state management
+├── models/
+│   └── expense.dart            # Expense data model & Category enumeration
+└── widgets/
+    ├── expenses_list.dart      # Dismissible transaction list view
+    ├── new_expense.dart        # Validated modal input form
+    └── chart/
+        └── chart_widget.dart   # Visual analytics chart component
